@@ -103,7 +103,7 @@ def drawing(frame_queue, detections_queue, fps_queue):
                 video.write(image)
             if not args.dont_show:
                 cv2.imshow('Inference', image)
-            if cv2.waitKey(fps) == 27:
+            if cv2.waitKey(fps+1) == 27:
                 break
     cap.release()
     video.release()
